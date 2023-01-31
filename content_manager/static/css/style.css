@@ -1,0 +1,17 @@
+@media (max-width: 767px) {
+    .vertical-align-center {
+        display: block;
+        text-align: start;
+        align-items: flex-start;
+    }
+    .xs-fit {
+        width: fit-content;
+    }
+}
+
+@media (min-width: 768px) {
+    .vertical-align-center {
+        display: flex;
+        align-items: center;
+    }
+}
