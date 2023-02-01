@@ -2,6 +2,23 @@
 
 
 {% block content %}
-Hi
+
+<div class="container-fluid flex-container">
+    {% for category in categories %}
+        <div class="container animal-type">
+            <p>
+                {{ category.thumbnail_preview }}
+                {{ category.name }}
+            </p>
+        </div>
+    {% endfor %}   
+</div>
+
+
+{% block page_content %}
+    
+{% endblock page_content %}
+    
+
 {% endblock %}
     

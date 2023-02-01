@@ -16,7 +16,7 @@ class Animal(models.Model):
         img_url = self.img.url
         if img_url is None:
             img_url='#'
-        return mark_safe(f'<img src="{img_url}" alt="{self.name}">')
+        return mark_safe(f'<img src="{img_url}" alt="{self.name}" class="animal-img">')
 
 
     def __str__(self):

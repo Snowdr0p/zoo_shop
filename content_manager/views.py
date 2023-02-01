@@ -2,12 +2,15 @@
 from django.http import HttpResponse
 from django.core.handlers.wsgi import WSGIRequest
 from django.shortcuts import render
+from shop_items.models import Animal
 
 
 def get_index(request: WSGIRequest) -> HttpResponse:
     """Главная страница"""
-    context = {
+    animals = Animal.objects.filter(show=True)
 
+    context = {
+        "categories": animals,
     }
 
     return render(
