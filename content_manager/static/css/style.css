@@ -9,8 +9,33 @@ body {
     background-color: #F6F6F7;
 }
 
+.flex-container {
+    margin-bottom: 10px;
+}
+
+.jumbotron-container {
+    margin: 0;
+    padding: 0;
+}
+
+.jumbotron {
+    background-color: white;
+}
+
+.jumbotron p {
+    line-height: 1;
+    padding-left: 10px;
+    border-left: 2px solid black;
+}
+
+.jumbotron button {
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
 .navbar {
     border-radius: 0;
+    margin-bottom: 0;
 }
 
 .animal-img {
