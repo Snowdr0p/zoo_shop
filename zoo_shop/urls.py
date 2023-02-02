@@ -6,7 +6,8 @@ from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('content_manager.urls'),),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('', include('content_manager.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

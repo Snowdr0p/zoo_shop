@@ -3,9 +3,9 @@
 
 {% block content %}
 
-{% block page_content %}
+{% block above_categories %}
     
-{% endblock page_content %}
+{% endblock %}
 
 <div class="container-fluid flex-container">
     {% for category in categories %}
@@ -17,6 +17,12 @@
         </div>
     {% endfor %}   
 </div>
+
+
+{% block below_categories %}
+    
+{% endblock below_categories %}
+    
 
 {% endblock %}
     

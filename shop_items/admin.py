@@ -4,7 +4,7 @@ from . import models
 
 
 @admin.register(models.Animal)
-class AdminAnimal(admin.ModelAdmin):
+class AnimalAdmin(admin.ModelAdmin):
     """config class for Animal model"""
     list_display = ('id', 'name', 'img', 'thumbnail_preview')
     list_editable = ('name', 'img')

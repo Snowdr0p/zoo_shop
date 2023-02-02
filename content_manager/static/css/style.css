@@ -38,6 +38,12 @@ body {
     margin-bottom: 0;
 }
 
+.news-container {
+    max-width: 500px;
+    padding: 0;
+    margin: 10px auto;
+}
+
 .animal-img {
     display: inline-block;
     width: var(--animal-width);

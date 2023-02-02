@@ -8,6 +8,7 @@ media
 migrations
 */static/ckeditor
 */static/admin
+uploaded_files
 
 # Backup files # 
 *.bak 

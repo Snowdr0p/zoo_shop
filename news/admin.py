@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import News
 
-# Register your models here.
+
+@admin.register(News)
+class NewsAdmin(admin.ModelAdmin):
+    """Admin panel for news"""
+    list_display = ['name', 'show', 'pub_date']
+    list_editable = ['show']

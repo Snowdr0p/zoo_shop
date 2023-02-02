@@ -1,6 +1,6 @@
 {% extends 'base_categories.html' %}
 
-{% block page_content %}
+{% block above_categories %}
 <div class="container-fluid jumbotron-container">
     <section class="jumbotron">
         <div class="row">
@@ -18,7 +18,20 @@
         </div>
     </section>
 </div>
+{% endblock %}
 
 
-{% endblock page_content %}
+{% block below_categories %}
+    {% if news %}
+        <section class="container-fluid flex-container">
+            {% for single_news in news %}
+                <article class="news-container">
+                    {{ single_news.as_html }}
+                </article>
+            {% endfor %}
+        </section>
+    {% endif %}
+        
+{% endblock below_categories %}
+    
     

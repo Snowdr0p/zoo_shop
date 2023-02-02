@@ -20,9 +20,6 @@ load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploaded_files')
-MEDIA_URL = '/media/'
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -49,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # third-party
     'ckeditor',
+    'ckeditor_uploader',
     # mine
     'shop_items',
     'news',
@@ -143,7 +141,22 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'content_manager', 'static')
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploaded_files')
+MEDIA_URL = '/media/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# ckeditor
+CKEDITOR_UPLOAD_PATH = 'uploads'
+CKEDITOR_RESTRICT_BY_USER = True
+CKEDITOR_IMAGE_BACKEND = 'ckeditor_uploader.backends.PillowBackend'
+CKEDITOR_THUMBNAIL_SIZE = (85, 85)
+
+CKEDITOR_CONFIGS = {
+    'default' : {
+        'toolbar': 'full',
+    },
+}
