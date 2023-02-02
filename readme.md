@@ -1,12 +1,19 @@
 # Интернет-магазин зоотоваров
 ## .env file:
 SECRET_KEY=""
+
 POSTGRES_USER=""
+
 POSTGRES_PASSWORD=""
+
 POSTGRES_NAME=""
+
 POSTGRES_HOST=""
+
 POSTGRES_PORT=""
+
 PGADMIN_DEFAULT_EMAIL=""
+
 PGADMIN_DEFAULT_PASSWORD=""
 ## Подготовка проекта к запуску
 - python -m venv venv
