@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('', include('content_manager.urls')),
+    path('reviews/', include('reviews.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # mine
     'shop_items',
     'news',
+    'reviews',
 ]
 
 MIDDLEWARE = [

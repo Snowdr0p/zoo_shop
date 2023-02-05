@@ -1,4 +1,4 @@
-{% extends 'base_categories.html' %}
+{% extends 'base_cat_map.html' %}
 
 {% block above_categories %}
 <div class="container-fluid jumbotron-container">
@@ -31,6 +31,24 @@
             {% endfor %}
         </section>
     {% endif %}
+    
+    <div class="container">
+        {% include 'reviews/reviews.html' %}
+    </div>
+
+    <div class="container-fluid bg-white">
+        <div class="row">
+            <article class="col-lg-7">
+                <h2>Здравствуйте, счастливый хозяин любимого питомца!</h2>
+                <p>Информация о крутом магазине</p>
+            </article>
+            <div class="col-lg-5">
+                <div class="hide-lg">
+                    <img src="http://territoriyazoo.by/django_media/photos_time/image_33.png" alt="Фотография магазина">
+                </div>
+            </div>
+        </div>
+    </div>
         
 {% endblock below_categories %}
     

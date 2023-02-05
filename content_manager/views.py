@@ -4,6 +4,7 @@ from django.core.handlers.wsgi import WSGIRequest
 from django.shortcuts import render
 from shop_items.models import Animal
 from news.models import News
+from reviews.forms import ReviewForm
 
 
 def get_index(request: WSGIRequest) -> HttpResponse:
@@ -14,6 +15,7 @@ def get_index(request: WSGIRequest) -> HttpResponse:
     context = {
         "categories": animals,
         "news": news,
+        "review_form": ReviewForm()
     }
 
     return render(
