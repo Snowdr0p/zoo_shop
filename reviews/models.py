@@ -12,7 +12,7 @@ class Review(models.Model):
     )
     pet_name = models.CharField(verbose_name="Имя питомца", max_length=20)
     text = models.CharField(verbose_name="Отзыв", max_length=200)
-    show = models.BooleanField(verbose_name="Отображать отзыв", default=False)
+    show = models.BooleanField(verbose_name="Отображать отзыв", default=True)
 
     def __str__(self):
         return f"{self.name} ({self.phone_number}: {self.text})"
