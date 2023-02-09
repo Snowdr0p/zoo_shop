@@ -1,6 +1,66 @@
 <section class="reviews-container">
-    <h2 class="text-center">REVIEW</h2>
-    <button type="button" class="btn btn-primary btn-lg centered" data-toggle="modal" data-target="#giveReview">Оставить свой отзыв</button>
+    <h2 class="text-center">Отзывы о магазине</h2>
+    {% if reviews %}
+        <div id="reviewCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators d-none">
+                {% for review in reviews %}
+                    {% if forloop.first %}
+                        <li data-target="#reviewCarousel" data-slide-to="{{ forloop.counter0 }}" class="active"></li>
+                    {% else %}
+                        <li data-target="#reviewCarousel" data-slide-to="{{ forloop.counter0 }}"></li>
+                    {% endif %}
+                {% endfor %}
+            </ol>
+
+            <div class="carousel-inner">
+                {% for review in reviews %}
+                    {% if forloop.first %}
+                        <article class="item active">
+                            <div class="review-block">
+                                <h3>{{ review.name }}</h2>
+                                <p>
+                                    <span class="glyphicon glyphicon-star star-color"></span>
+                                    <span class="glyphicon glyphicon-star star-color"></span>
+                                    <span class="glyphicon glyphicon-star star-color"></span>
+                                    <span class="glyphicon glyphicon-star star-color"></span>
+                                    <span class="glyphicon glyphicon-star star-color"></span>
+                                </p>
+                                <p class="review-text"><i>{{ review.text }}</i></p>
+                            </div>
+                        </article>
+                    {% else %}
+                        <article class="item">
+                            <div class="review-block">
+                                <h3>{{ review.name }}</h2>
+                                <p>
+                                    <span class="glyphicon glyphicon-star star-color"></span>
+                                    <span class="glyphicon glyphicon-star star-color"></span>
+                                    <span class="glyphicon glyphicon-star star-color"></span>
+                                    <span class="glyphicon glyphicon-star star-color"></span>
+                                    <span class="glyphicon glyphicon-star star-color"></span>
+                                </p>
+                                <p class="review-text"><i>{{ review.text }}</i></p>
+                            </div>
+                        </article>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div>
+                <a class="left carousel-control" href="#reviewCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left icon-color"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <button type="button" class="btn btn-primary btn-lg centered" data-toggle="modal" data-target="#giveReview">Оставить свой отзыв</button>
+                <a class="right carousel-control" href="#reviewCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right icon-color"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    {% else %}
+        <h3 class="text-center">Отзывов пока нет - будьте первым!</h3>
+        <button type="button" class="btn btn-primary btn-lg centered" data-toggle="modal" data-target="#giveReview">Оставить свой отзыв</button>
+    {% endif %}
 </section>
 
 <div id="giveReview" class="modal fade" role="dialog">

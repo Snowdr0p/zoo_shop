@@ -7,8 +7,8 @@ class News(models.Model):
     """Новости для сайта"""
     name = models.CharField(verbose_name='Название', max_length=50)
     content = RichTextUploadingField(verbose_name='Содержимое')
-    show = models.BooleanField(verbose_name='Показывать на главной', default=True)
-    pub_date = models.DateTimeField(verbose_name='Дата добавления', auto_now_add=True)
+    show = models.BooleanField(verbose_name='Показывать на главной', default=True, db_index=True)
+    pub_date = models.DateTimeField(verbose_name='Дата добавления', auto_now_add=True, db_index=True)
 
     def as_html(self) -> str:
         """returns safe html content"""

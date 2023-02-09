@@ -13,6 +13,26 @@ body {
     background-color: white;
 }
 
+a.carousel-control {
+    bottom: 25px;
+    top: auto;
+}
+
+a.carousel-control.left, a.carousel-control.right {
+    background-image: none;
+    filter: none;
+    background-color: none;
+}
+
+.centered {
+    display: block;
+    margin: 0 auto;
+}
+
+.d-none {
+    display: none;
+}
+
 .flex-container {
     margin-bottom: 10px;
 }
@@ -37,23 +57,22 @@ body {
     padding: 10px 20px;
 }
 
-.map {
-    margin: 40px;
-    aspect-ratio: 930/500;
+.icon-color {
+    color: #337AB7;
 }
 
 .info {
     margin: 40px;
 }
 
+.map {
+    margin: 40px;
+    aspect-ratio: 930/500;
+}
+
 .navbar {
     border-radius: 0;
     margin-bottom: 0;
-}
-
-.centered {
-    display: block;
-    margin: 0 auto;
 }
 
 .news-container {
@@ -64,8 +83,33 @@ body {
 
 .reviews-container {
     background-color: white;
-    padding: 20px auto;
+    border-top-left-radius: 30px;
+    padding: 10px;
     margin: 20px;
+}
+
+.review-block {
+    border: 1px solid #337AB7;
+    border-left: 10px solid #337AB7;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.review-block > p.review-text {
+    padding-left: 20px;
+}
+
+.review-block > p {
+    font-size: 130%;
+}
+
+.star-color {
+    color: gold;
+}
+
+.top-right {
+    float: right;
 }
 
 .animal-img {
