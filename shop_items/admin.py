@@ -15,3 +15,17 @@ class AnimalAdmin(admin.ModelAdmin):
     
     thumbnail_preview.short_description = 'Предпросмотр изображения'
     thumbnail_preview.allow_tags = True
+
+
+@admin.register(models.ItemType)
+class ItemTypeAdmin(admin.ModelAdmin):
+    """config class for ItemType"""
+    list_display = ['id', 'name', 'animal']
+    list_editable = ['name', 'animal']
+
+
+@admin.register(models.Brand)
+class BrandAdmin(admin.ModelAdmin):
+    """config class for Brand model"""
+    list_display = ['id', 'name', 'img']
+    list_editable = ['name', 'img']
