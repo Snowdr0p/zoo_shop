@@ -32,7 +32,22 @@
         </section>
     {% endif %}
     
-    
+    <div class="container">
+        <h2>Популярные бренды</h2>
+    </div>
+    <div class="container">
+        <div class="flex-brand">
+            {% for brand in brands %}
+            <div class="brand-item">
+                {% if brand.img %}
+                <img src="{{ brand.img.url }}" alt="{{ brand.name }}">
+                {% else %}
+                <img src="" alt="{{ brand.name }}">
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 
     <div class="container">
         {% include 'reviews/reviews.html' %}

@@ -33,6 +33,22 @@ a.carousel-control.left, a.carousel-control.right {
     display: none;
 }
 
+.flex-brand {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-item {
+    margin: 10px;
+}
+
+.brand-item > img {
+    width: 120px;
+    height: 120px;
+}
+
 .flex-container {
     margin-bottom: 10px;
 }
